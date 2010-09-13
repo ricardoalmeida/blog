@@ -1,0 +1,16 @@
+!!! 5
+%html
+  %head
+    %title
+    = raw javascript_include_tag(:base)
+    = raw stylesheet_link_tag("screen", :media => "screen, projection")
+    = raw stylesheet_link_tag("print", :media => "print")
+    /[if lt IE 8]
+      = raw stylesheet_link_tag("ie", :media => "screen, projection")
+    = csrf_meta_tag
+  %body
+    #container
+      #header HEADER
+      #content= yield
+      #sidebar SIDEBAR
+      #footer FOOTER
