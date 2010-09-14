@@ -1,0 +1,9 @@
+= simple_form_for @post do |f|
+  .field
+    = f.error :title
+    = f.input :title
+  .field
+    = f.error :body
+    = f.input :body
+  .actions
+    = f.button :submit

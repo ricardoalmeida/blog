@@ -1,4 +1,6 @@
 Blog::Application.routes.draw do
+  resources :posts
+
   devise_for :admins, :path => "admin", :path_names => { :sign_in => "login", :sign_out => "logout" }
 
   # The priority is based upon order of creation:
