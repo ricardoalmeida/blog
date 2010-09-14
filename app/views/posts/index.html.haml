@@ -4,6 +4,7 @@
   %tr
     %th Title
     %th Body
+    %th Author
     %th
     %th
     %th
@@ -12,6 +13,7 @@
     %tr
       %td= post.title
       %td= post.body
+      %td= post.admin.username
       %td= link_to "Show", post
       - if admin_signed_in?
         %td= link_to "Edit", edit_post_path(post)
