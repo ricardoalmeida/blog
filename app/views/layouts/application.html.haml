@@ -2,11 +2,11 @@
 %html
   %head
     %title Blog
-    = raw javascript_include_tag(:defaults)
-    = raw stylesheet_link_tag("screen", :media => "screen, projection")
-    = raw stylesheet_link_tag("print", :media => "print")
+    = raw javascript_include_tag :defaults
+    = raw stylesheet_link_tag "screen", :media => "screen, projection"
+    = raw stylesheet_link_tag "print", :media => "print"
     /[if lt IE 8]
-      = raw stylesheet_link_tag("ie", :media => "screen, projection")
+      = raw stylesheet_link_tag "ie", :media => "screen, projection"
     = csrf_meta_tag
   %body
     #container

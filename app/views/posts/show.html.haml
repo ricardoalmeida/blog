@@ -3,7 +3,7 @@
   = @post.title
 %p
   %b Body:
-  = @post.body
+  = raw @post.body
 
 = link_to "Edit", edit_post_path(@post)
 \|
