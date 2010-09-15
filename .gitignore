@@ -19,3 +19,4 @@ cache
 gems
 
 public/javascripts/tiny_mce
+config/disqus.yml

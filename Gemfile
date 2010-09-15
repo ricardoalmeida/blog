@@ -13,6 +13,7 @@ gem "highline"
 gem "rspec-rails", ">=2.0.0.beta.20", :group => [:development, :test]
 gem "tiny_mce"
 gem "friendly_id"
+gem "disqus"
 
 group :test do
   gem "rspec", ">=2.0.0.beta.20"
