@@ -29,4 +29,7 @@ form {
   @include blueprint-form;
 }
 
-
+.mceEditor {
+  width: 600px;
+  height: 500px;
+}
