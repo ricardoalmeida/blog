@@ -1,23 +1,14 @@
-%h1 Listing posts
+- @posts.each do |post|
+  %h2.title= link_to post.title, post
+  .body= raw truncate_html(post.body, :length => 500)
+  .user= post.admin.username
+  
+  - if admin_signed_in?
+    .edit= link_to "Edit", edit_post_path(post)
+    .destroy= link_to "Destroy", post, :confirm => "Are you sure?", :method => :delete
 
-%table
-  %tr
-    %th Title
-    %th Body
-    %th Author
-    %th
-    %th
-    %th
-
-  - @posts.each do |post|
-    %tr
-      %td= post.title
-      %td= raw post.body
-      %td= post.admin.username
-      %td= link_to "Show", post
-      - if admin_signed_in?
-        %td= link_to "Edit", edit_post_path(post)
-        %td= link_to "Destroy", post, :confirm => "Are you sure?", :method => :delete
+  %br
+  %hr
 
 %br
 

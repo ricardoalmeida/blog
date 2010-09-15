@@ -11,7 +11,8 @@
     = csrf_meta_tag
   %body
     #container
-      #header= render "devise/login_items"
+      #header
+        %h1= link_to "Blog", root_path
       #content= yield
-      #sidebar SIDEBAR
+      #sidebar= render "devise/login_items"
       #footer FOOTER

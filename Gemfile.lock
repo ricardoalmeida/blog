@@ -111,6 +111,7 @@ GEM
     tiny_mce (0.1.4)
     treetop (1.4.8)
       polyglot (>= 0.3.1)
+    truncate_html (0.4.0)
     tzinfo (0.3.23)
     warden (0.10.7)
       rack (>= 1.0.0)
@@ -136,4 +137,5 @@ DEPENDENCIES
   simple_form
   sqlite3-ruby
   tiny_mce
+  truncate_html
   will_paginate
