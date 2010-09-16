@@ -1,6 +1,6 @@
 = simple_form_for @post do |f|
   .field
-    = f.input :title
+    = f.input :title, :input_html => { :disabled => readonly }
   .field
     = f.input :body, :input_html => { :class => "mceEditor" }
   .actions

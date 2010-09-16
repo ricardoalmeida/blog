@@ -1,0 +1,4 @@
+= render "devise/login_items"
+%br
+- if admin_signed_in?
+  = link_to "New Post", new_post_path

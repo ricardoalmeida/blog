@@ -6,7 +6,7 @@ describe PostsController do
     sign_in @admin
   end
 
-  should_behave_like_resource :except => :create
+  should_behave_like_resource :except => :create, :paginate => true
 
   describe "POST create" do
     describe "with valid parameters" do

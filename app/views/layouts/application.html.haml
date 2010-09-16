@@ -8,11 +8,13 @@
     = raw stylesheet_link_tag "print", :media => "print"
     /[if lt IE 8]
       = raw stylesheet_link_tag "ie", :media => "screen, projection"
+    %link{:href => 'http://fonts.googleapis.com/css?family=Cantarell', :rel => 'stylesheet', :type => 'text/css'}
     = csrf_meta_tag
   %body
     #container
-      #header
-        %h1= link_to "Blog", root_path
+      #header= render "shared/header"
+      %hr
       #content= yield
-      #sidebar= render "devise/login_items"
-      #footer FOOTER
+      #sidebar= render "shared/sidebar"
+      %hr
+      #footer= render "shared/footer"
