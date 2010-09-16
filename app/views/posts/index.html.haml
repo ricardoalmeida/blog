@@ -1,7 +1,13 @@
 - @posts.each do |post|
   %h2.title= link_to post.title, post
   .body= raw truncate_html(post.body, :length => 500)
-  .user= post.admin.username
+  .user
+    By 
+    = post.admin.username
+  
+  .comments_count
+    = link_to "Permalink", post_path(post, :anchor => "disqus_thread")
+    = raw disqus_comment_counts
   
   - if admin_signed_in?
     .edit= link_to "Edit", edit_post_path(post)
