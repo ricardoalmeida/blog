@@ -1,11 +1,16 @@
 - @posts.each do |post|
-  %h2.title= link_to post.title, post
+  .datebox
+    .month= post.created_at.strftime "%b"
+    .day= post.created_at.day 
+  .title
+    = link_to post.title, post
+    .date
+      on
+      = post.created_at.strftime "%B %d, %Y"
   .body= raw truncate_html(post.body, :length => 700)
   .user
     By 
     = post.admin.username
-    \| on
-    = post.created_at.strftime "%B %d, %Y"
     \|
     = link_to "Comments", post_path(post, :anchor => "disqus_thread")
     = raw disqus_comment_counts

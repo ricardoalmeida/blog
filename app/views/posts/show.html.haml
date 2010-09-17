@@ -1,10 +1,15 @@
-%h2.title= link_to @post.title, @post
+.datebox
+  .month= @post.created_at.strftime "%b"
+  .day= @post.created_at.day 
+.title
+  = link_to @post.title, @post
+  .date
+    on
+    = @post.created_at.strftime "%B %d, %Y"
+.body= raw @post.body
 .user
   By 
   = @post.admin.username
-  \| on
-  = @post.created_at.strftime "%B %d, %Y"
-.body= raw @post.body
 
 - if admin_signed_in?
   .manage
